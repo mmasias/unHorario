@@ -12,6 +12,10 @@ public class Subject {
         this.credits = credits;
     }
 
+    public Subject(String name){
+        this(name,name.substring(0, 4).toUpperCase(),0);
+    }
+
     public String show() {
         return name + " [" + credits + "]";
     }
@@ -23,7 +27,8 @@ public class Subject {
     public static void main(String[] args) {
 
         Subject subject;
-        subject = new Subject("Programación 2", "PRG2", 6);
+        subject = new Subject("Programación 2");
         System.out.println(subject.show());
+        System.out.println(subject.showCode());
     }
 }
