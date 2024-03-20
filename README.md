@@ -10,5 +10,5 @@ public String showCode()
 |[Schedule]()|
 |-|
 public Schedule()
-public void addSubject(Subject subject, int day, int hour, String classroom)
-public void showSchedule()
+public void addSubject(Subject subject, int day, int hour)
+public String showSchedule()
