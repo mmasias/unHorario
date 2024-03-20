@@ -5,6 +5,8 @@ public class Subject {
     private int credits;
 
     public Subject(String name, String code, int credits) {
+        assert name!=null && code.length()==4 && credits >=0;
+
         this.name = name;
         this.code = code;
         this.credits = credits;
