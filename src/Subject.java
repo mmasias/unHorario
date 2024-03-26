@@ -29,17 +29,4 @@ public class Subject {
     public String showCode() {
         return code;
     }
-
-    public static void main(String[] args) {
-
-        Subject subject;
-        subject = new Subject("Programación 2");
-        System.out.println(subject.show());
-        System.out.println(subject.showCode());
-
-
-        subject.setCredits(6);
-        System.out.println(subject.show());
-
-    }
 }

@@ -22,24 +22,5 @@ public class Schedule {
             schedule += "\n";
         }
         return schedule;
-    }    
-
-    public static void main(String[] args) {
-        
-        Schedule schedule = new Schedule();
-    
-        Subject asignatura = new Subject("Progamacion 1", "Prg1",0);
-        schedule.addSubject(asignatura, 1, 1);
-        schedule.addSubject(asignatura, 1, 2);
-    
-        asignatura = new Subject("Matemática 1", "mat1", 6);
-        schedule.addSubject(asignatura, 1, 3);
-        schedule.addSubject(asignatura, 1, 4);
-    
-        asignatura = new Subject("Proyectos");
-        schedule.addSubject(asignatura, 4, 2);
-    
-        System.out.println(schedule.show());
-
-    }    
+    }        
 }
