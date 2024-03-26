@@ -1,4 +1,5 @@
 public class Schedule {
+    
     private Subject[][] subjects;
 
     public Schedule(){
@@ -25,17 +26,19 @@ public class Schedule {
 
     public static void main(String[] args) {
         
-        Subject programacion1 = new Subject("Progamacion 1", "Prg1",0);
-        Subject matematica1 = new Subject("Matemática 1", "mat1", 6);
-        Subject proyectos = new Subject("Proyectos");
-
         Schedule schedule = new Schedule();
-        schedule.addSubject(matematica1, 1, 1);
-        schedule.addSubject(matematica1, 1, 2);
-        schedule.addSubject(proyectos, 1, 3);
-        schedule.addSubject(proyectos, 1, 4);
-        schedule.addSubject(programacion1, 2, 1);
-        schedule.addSubject(programacion1, 2, 2);
+    
+        Subject asignatura = new Subject("Progamacion 1", "Prg1",0);
+        schedule.addSubject(asignatura, 1, 1);
+        schedule.addSubject(asignatura, 1, 2);
+    
+        asignatura = new Subject("Matemática 1", "mat1", 6);
+        schedule.addSubject(asignatura, 1, 3);
+        schedule.addSubject(asignatura, 1, 4);
+    
+        asignatura = new Subject("Proyectos");
+        schedule.addSubject(asignatura, 4, 2);
+    
         System.out.println(schedule.show());
 
     }    
