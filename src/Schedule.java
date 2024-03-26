@@ -7,13 +7,20 @@ public class Schedule {
     }
 
     public void addSubject(Subject subject, int day, int hour) {
-        assert subject != null && day > 0 && hour > 0 && day < subjects.length && hour < subjects[0].length;
+        assert subject != null && validDateTime(day,hour);
         subjects[day - 1][hour - 1] = subject;
     }
 
     public boolean isFree(int day, int hour) {
-        assert day > 0 && hour > 0 && day < subjects.length && hour < subjects[0].length;
+        assert validDateTime(day,hour);
         return subjects[day - 1][hour - 1] == null;
+    }
+
+    public Subject pickSubject(int day, int hour){
+        assert !isFree(day,hour);
+        Subject subject = subjects[day - 1][hour - 1];
+        subjects[day - 1][hour - 1]=null;
+        return subject;
     }
 
     public String show() {
@@ -41,5 +48,9 @@ public class Schedule {
         }
         return schedule;
     }    
+
+    private boolean validDateTime(int day, int hour){
+        return day > 0 && hour > 0 && day < subjects.length && hour < subjects[0].length;
+    }
 
 }

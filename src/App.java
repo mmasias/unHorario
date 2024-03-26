@@ -21,8 +21,12 @@ public class App {
 
         subject = new Subject("Proyectos");
         schedule.addSubject(subject, 4, 2);
+        System.out.println(schedule.show());
 
-        System.out.println(schedule.showAddenda());
+        subject = schedule.pickSubject(2, 1);
+        System.out.println(schedule.isFree(2, 1));
+        schedule.addSubject(subject, 4, 1);
+
+        System.out.println(schedule.show());
     }
-
 }
